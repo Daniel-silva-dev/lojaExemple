@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destaque 1 - Margem Sul</title>
+  <link rel="stylesheet" href="../estilos/slideDestaque.css">
+</head>
+<body>
+  <header>
+    <h1>Margem Sul</h1>
+    <nav>
+      <a href="../index.html#camisetas">Camisetas</a>
+      <a href="../index.html#calcas">Calças</a>
+      <a href="../index.html#tenis">Tênis</a>
+    </nav>
+  </header>
+
+  <main class="produto-destaque">
+    <img src="./test01.jpeg" width="150px" alt="Destaque 1">
+    <h2>Camiseta Premium Exclusiva</h2>
+    <p>Camiseta feita em algodão de alta qualidade, edição limitada.</p>
+    <p><strong>R$ 149,90</strong></p>
+    <label for="tamanho">Tamanho:</label>
+    <select id="tamanho">
+      <option value="P">P</option>
+      <option value="M">M</option>
+      <option value="G">G</option>
+      <option value="GG">GG</option>
+    </select>
+    <button onclick="fazerPedido()">Fazer pedido</button>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Margem Sul - Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    function fazerPedido() {
+      const tamanho = document.getElementById("tamanho").value;
+      const whatsapp = "5584992035664";
+      const mensagem = `Olá, quero fazer um pedido:%0A` +
+                       `Produto: Camiseta Premium Exclusiva%0A` +
+                       `Preço: R$ 149,90%0A` +
+                       `Tamanho: ${tamanho}`;
+      window.open(`https://wa.me/${whatsapp}?text=${mensagem}`, "_blank");
+    }
+  </script>
+</body>
+</html>
